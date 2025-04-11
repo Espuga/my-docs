@@ -1,0 +1,4 @@
+---
+title: AI
+description: Bootcamp 2025 Generative AI, LLM Apps, AI Agents, AI Cursor
+---
