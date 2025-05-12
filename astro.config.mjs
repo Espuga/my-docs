@@ -6,13 +6,14 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'My Dev Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Espuga' }],
 			sidebar: [
 				{
-					label: 'AI',
+					label: 'Vue3',
 					items: [
-						{ label: 'AI', slug: 'ai/ai' },
+						{ label: '🌐 Translations', slug: 'vue3/translations' },
+            { label: '🧭 Tours', slug: 'vue3/tours' },
 					],
 				},
 			],
