@@ -23,6 +23,13 @@ export default defineConfig({
 						{ label: '🛠️ Tool Function as Agent', slug: 'ai/agent' },
 					],
 				},
+				{
+					label: 'UOC',
+					items: [
+						{ label: 'Back-end', slug: 'uoc/back-end/backend' },
+						{ label: 'Full stack', slug: 'uoc/full-stack/fullstack' },
+					],
+				},
 			],
 		}),
 	],
