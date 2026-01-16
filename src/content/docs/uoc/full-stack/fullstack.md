@@ -22,8 +22,8 @@ Què heu fet
 -	Frontend en HTML5 + CSS3 + Vanilla JS
 -	Estils i components amb Bootstrap
 -	Dades en un únic fitxer datos.js:
--	Arrays d’objectes en memòria (sense BD)
--	Export modular (import/export)
+	-	Arrays d’objectes en memòria (sense BD)
+	-	Export modular (import/export)
 -	4 pantalles (encara que no estiguin 100% completes):
 	1.	Dashboard: targetes d’ofertes i peticions (diferenciades per color)
 	2.	Login: “logueig” de prototip (validant contra dades en memòria)
@@ -55,16 +55,16 @@ APIs i conceptes que heu aplicat
 -	Canvas: gràfic de voluntariats (dibuix natiu)
 -	Drag & Drop: arrossegar targetes i seleccionar voluntariats al dashboard
 -	Mòduls JS:
--	almacenaje.js concentra el CRUD comú
--	int_1_dashboard.js, int_3_voluntariados.js, int_4_usuarios.js gestionen cada pantalla
+	-	almacenaje.js concentra el CRUD comú
+	-	int_1_dashboard.js, int_3_voluntariados.js, int_4_usuarios.js gestionen cada pantalla
 
 Login (molt preguntable)
 -	mostrarUsuarioActivo():
--	si hi ha usuari actiu → mostra nom/email
--	si no → “-no login-”
+	-	si hi ha usuari actiu → mostra nom/email
+	-	si no → “-no login-”
 -	loguearUsuario():
--	valida credencials
--	guarda l’usuari actiu a localStorage
+	-	valida credencials
+	-	guarda l’usuari actiu a localStorage
 
 Usuari vs voluntariats (diferència important)
 -	Usuaris: persistència a localStorage (simple)
@@ -115,30 +115,30 @@ Aquí feu la integració real: el frontend del producte 2 deixa d’utilitzar pe
 Canvis clau
 1.	Mongoose ODM
 
--	Schemas i models
--	Validació
--	Consultes més còmodes
--	Middlewares
+	-	Schemas i models
+	-	Validació
+	-	Consultes més còmodes
+	-	Middlewares
 
 2.	Fetch API
 
--	El almacenaje.js ja no fa CRUD local
--	Ara fa crides asíncrones al backend:
--	fetch() + async/await
--	enviar queries/mutations GraphQL per HTTP
+	-	El almacenaje.js ja no fa CRUD local
+	-	Ara fa crides asíncrones al backend:
+		-	fetch() + async/await
+		-	enviar queries/mutations GraphQL per HTTP
 
 3.	Autenticació i rols
 
--	Usuari admin vs usuari normal
--	Control d’accés:
--	al servidor (middleware/validacions)
--	i al client (mostrar/ocultar opcions)
--	Sessió mantinguda al servidor (segons l’enunciat)
+	-	Usuari admin vs usuari normal
+	-	Control d’accés:
+		-	al servidor (middleware/validacions)
+		-	i al client (mostrar/ocultar opcions)
+	-	Sessió mantinguda al servidor (segons l’enunciat)
 
 4.	WebSockets amb Socket.io
 
--	Patró PUB/SUB
--	Quan algú publica/selecciona voluntariat → els altres ho veuen en temps real al dashboard
+	-	Patró PUB/SUB
+	-	Quan algú publica/selecciona voluntariat → els altres ho veuen en temps real al dashboard
 
 Preguntes típiques
 -	“Què aporta Mongoose respecte el driver natiu?”
@@ -168,6 +168,7 @@ Preguntes típiques
 -	“com ho vau implementar als treballs?”
 
 Això vol dir que el que has d’estudiar és:
+
 ✅ Productes 1–4, sobretot:
 -	modularització
 -	persistència navegador vs servidor

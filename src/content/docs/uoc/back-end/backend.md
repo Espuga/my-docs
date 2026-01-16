@@ -21,10 +21,10 @@ Que puguis explicar com funciona tot el flux, no només el codi.
 -	Docker (local) → entorn de desenvolupament
 -	AWS (producció) → servidor final
 -	LAMP:
--	Linux
--	Apache
--	MySQL
--	PHP
+    -	Linux
+    -	Apache
+    -	MySQL
+    -	PHP
 
 🔹 Per què Docker?
 -	Tenir el mateix entorn per tots
@@ -37,10 +37,10 @@ PHP natiu (Producte 2):
 -	Connexió amb mysqli o PDO
 -	Fitxer típic: config/db.php
 -	Variables:
--	host
--	usuari
--	password
--	base de dades
+    -	host
+    -	usuari
+    -	password
+    -	base de dades
 
 👉 Exemple d’explicació:
 
@@ -58,24 +58,23 @@ Laravel (Producte 3):
 Què has fet
 -	Instal·lar Docker
 -	Crear contenidors amb:
--	Apache
--	PHP
--	MySQL
--	PHPMyAdmin
+    -	Apache
+    -	PHP
+    -	MySQL
+    -	PHPMyAdmin
 -	Provar PHP amb un Hola Mundo
 -	Accedir a la DB amb PHPMyAdmin
 -	Instal·lar:
--	WordPress
--	Laravel
+    -	WordPress
+    -	Laravel
 -	Migrar tot a AWS
--	FTP (FileZilla)
--	Export/import DB
+    -	FTP (FileZilla)
+    -	Export/import DB
 
-Què demostres
-
-✔ Entens què és un servidor
-✔ Saps desplegar una app
-✔ Saps migrar de local a producció
+Què demostres:
+- Entens què és un servidor
+- Saps desplegar una app
+- Saps migrar de local a producció
 
 ---
 
@@ -90,18 +89,20 @@ Tecnologia
 
 Estructura típica (MOLT preguntable)
 
+```code
 /controllers
 /models
 /views
 /config
 /public
+```
 
 Funcionalitats clau
 -	Login / registre
 -	Rols:
--	Admin
--	Usuari particular
--	Hotels (corporatius)
+    -	Admin
+    -	Usuari particular
+    -	Hotels (corporatius)
 -	Gestió de reserves
 -	Calendari de reserves
 -	Enviament de correus
@@ -138,30 +139,34 @@ Resposta: Git + FTP segons el cas.
 Què canvia respecte Producte 2
 -	Mateixa app
 -	Però:
--	Amb Laravel
--	Millor estructura
--	Millor seguretat
--	ORM (Eloquent)
+    -	Amb Laravel
+    -	Millor estructura
+    -	Millor seguretat
+    -	ORM (Eloquent)
 
 Estructura Laravel (EXAMEN CLÀSSIC)
 
+```code
 routes/
 app/Http/Controllers
 app/Models
 resources/views
 database/migrations
 .env
+```
 
 Web Service REST
 -	Endpoint que retorna JSON
 -	Dades agregades:
--	zona
--	nombre de trasllats
--	percentatge
+    -	zona
+    -	nombre de trasllats
+    -	percentatge
 
 👉 Exemple:
 
+```code
 GET /api/zones
+```
 
 👉 Resposta clau:
 
@@ -176,17 +181,17 @@ Què has fet
 -	Crear tema de blocs
 -	Full Site Editing (FSE)
 -	Crear pàgines:
--	Home
--	Serveis
--	Flota
--	Blog
+    -	Home
+    -	Serveis
+    -	Flota
+    -	Blog
 -	Crear bloc personalitzat en PHP
 -	Llegir JSON del Producte 3
 -	Mostrar dades dinàmiques
 
 👉 Aquí es demostra:
-✔ Integració back-end → front-end
-✔ Reutilització de serveis
+- Integració back-end → front-end
+- Reutilització de serveis
 
 ---
 
@@ -206,9 +211,9 @@ Què has fet
 -	Fase 2: planificació, Trello, Site
 -	Fase 3: desenvolupament
 -	Fase 4:
--	Autoavaluació
--	Coavaluació
--	Defensa oral
+    -	Autoavaluació
+    -	Coavaluació
+    -	Defensa oral
 
 👉 Saben que has participat perquè:
 -	Vídeos
@@ -220,19 +225,19 @@ Què has fet
 🔟 PREGUNTES D’EXAMEN REALS (I COM RESPONDRE)
 
 ❓ Com està connectada la BD?
-→ Fitxer de config / .env / Eloquent
+- Fitxer de config / .env / Eloquent
 
 ❓ Diferència PHP pur vs Laravel?
-→ Framework, ORM, seguretat, estructura
+- Framework, ORM, seguretat, estructura
 
 ❓ Per què Docker?
-→ Entorn controlat i replicable
+- Entorn controlat i replicable
 
 ❓ Què és un Web Service REST?
-→ Servei que retorna dades via HTTP en JSON
+- Servei que retorna dades via HTTP en JSON
 
 ❓ Per què MVC?
-→ Organització i mantenibilitat
+- Organització i mantenibilitat
 
 ---
 
