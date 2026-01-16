@@ -101,8 +101,53 @@ MongoDB sense Mongoose
 
 Preguntes típiques
 -	“Quina diferència hi ha entre REST i GraphQL?”
+
+	REST:
+	-	Té múltiples endpoints (/users, /voluntariados, etc.).
+	-	Cada endpoint retorna una estructura fixa de dades.
+	-	Sovint reps massa dades o massa poques (overfetching / underfetching).
+
+	GraphQL:
+	-	Té un únic endpoint.
+	-	El client decideix exactament quines dades vol.
+	-	És més eficient perquè només retorna els camps sol·licitats.
+
+	👉 Frase d’examen:
+
+	En REST el servidor defineix què retorna cada endpoint, mentre que en GraphQL el client defineix exactament les dades que necessita.
+
 -	“Què és una Mutation?”
+
+	Una Mutation en GraphQL és l’operació que serveix per modificar dades.
+	-	S’utilitza per:
+	-	crear (insertar)
+	-	modificar (actualitzar)
+	-	eliminar (borrar)
+	-	És l’equivalent a:
+	-	POST, PUT, DELETE en REST
+
+	👉 Exemple conceptual:
+
+	Una mutation permet afegir un voluntariat o eliminar un usuari a la base de dades.
+
+	👉 Frase d’examen:
+
+	Les mutations són les operacions d’escriptura de GraphQL, mentre que les queries són només de lectura.
+
 -	“Per què GraphQL té un sol endpoint?”
+
+	Perquè totes les operacions (queries i mutations) passen pel mateix punt d’entrada.
+	-	El que canvia no és l’endpoint, sinó:
+		-	la query que s’envia
+	-	Avantatges:
+		-	API més simple
+		-	Menys endpoints a mantenir
+		-	Més flexibilitat pel frontend
+
+	👉 Frase d’examen:
+
+	GraphQL utilitza un únic endpoint perquè la lògica de quines dades es volen es defineix dins la consulta, no en la URL.
+
 -	“Com provaries una query amb Postman?”
 -	“Quin problema tens si no controles validacions al servidor?”
 
@@ -142,7 +187,45 @@ Canvis clau
 
 Preguntes típiques
 -	“Què aporta Mongoose respecte el driver natiu?”
+
+	Mongoose és un ODM (Object Document Mapper) que afegeix una capa extra sobre MongoDB.
+
+	Amb el driver natiu:
+	-	Treballes directament amb documents JSON
+	-	No hi ha esquemes ni validacions automàtiques
+	-	Més codi manual
+
+	Amb Mongoose:
+	-	Esquemes per definir l’estructura de les dades
+	-	Validacions automàtiques
+	-	Models per treballar amb dades com a objectes
+	-	Consultes més clares i llegibles
+	-	Middlewares (abans/després de guardar, esborrar, etc.)
+
+	👉 Frase d’examen:
+
+	Mongoose facilita el treball amb MongoDB afegint esquemes, validacions i models, reduint errors i millorant la mantenibilitat del codi.
+
 -	“Com envies una query GraphQL amb fetch?”
+
+	Una query GraphQL s’envia mitjançant una petició HTTP (normalment POST) utilitzant fetch.
+
+	Conceptualment:
+	1.	Fas un fetch a l’endpoint GraphQL
+	2.	Enviïs un body en format JSON
+	3.	Dins el body especifiques:
+		-	la query o mutation
+		-	les variables (si n’hi ha)
+	4.	Processos la resposta amb async/await
+
+	👉 Explicació d’examen:
+
+	El frontend utilitza fetch per enviar una petició POST a l’endpoint GraphQL amb la query dins del cos de la petició en format JSON, i rep la resposta també en JSON.
+
+	👉 Frase curta per memoritzar:
+
+	Amb fetch enviem queries GraphQL com a POST amb un body JSON que conté la consulta.
+
 -	“Per què cal validar permisos al servidor i no només al client?”
 -	“Quina diferència hi ha entre HTTP (fetch) i websockets (temps real)?”
 
