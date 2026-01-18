@@ -24,6 +24,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: '🧰 Utils',
+					items: [
+						{ label: '🌐 WebSocket', slug: 'utils/websocket/websocket' },
+					],
+				},
+				{
 					label: 'UOC',
 					items: [
 						{ label: 'Back-end', slug: 'uoc/back-end/backend' },
